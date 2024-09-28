@@ -42,10 +42,14 @@ h2 {
     color: #343a40;
     border-bottom: 2px solid #343a40;
     padding-bottom: 5px;
+    text-align: center;
 }
 
 main {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
 }
 
 .recipe {
@@ -54,6 +58,8 @@ main {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     padding: 15px;
+    width: 300px; /* Set a fixed width for consistency */
+    text-align: center; /* Center text inside recipe boxes */
     transition: transform 0.2s;
 }
 
@@ -80,6 +86,7 @@ form {
     border-radius: 5px;
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Set a fixed width for the form */
 }
 
 label {
