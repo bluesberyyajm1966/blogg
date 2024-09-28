@@ -3,56 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Sharing Site</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Daniel's Web Dev Journey</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Delicious Recipes</h1>
-        <nav>
-            <ul>
-                <li><a href="#recipes">All Recipes</a></li>
-                <li><a href="#submit-recipe">Submit a Recipe</a></li>
-            </ul>
-        </nav>
+        <h1>Welcome to My Web Dev Journey</h1>
     </header>
 
-    <main>
-        <section id="recipes">
-            <h2>All Recipes</h2>
-            <div class="recipe">
-                <h3>Spaghetti Carbonara</h3>
-                <p>A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper.</p>
-                <a class="view-recipe" href="#">View Recipe</a>
-            </div>
-            <div class="recipe">
-                <h3>Chocolate Chip Cookies</h3>
-                <p>Soft and chewy cookies loaded with chocolate chips.</p>
-                <a class="view-recipe" href="#">View Recipe</a>
-            </div>
-            <div class="recipe">
-                <h3>Caesar Salad</h3>
-                <p>A fresh salad with romaine lettuce, croutons, and Caesar dressing.</p>
-                <a class="view-recipe" href="#">View Recipe</a>
-            </div>
-        </section>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-        <section id="submit-recipe">
-            <h2>Submit a Recipe</h2>
-            <form>
-                <label for="recipe-name">Recipe Name:</label>
-                <input type="text" id="recipe-name" name="recipe-name" required>
-                
-                <label for="recipe-description">Description:</label>
-                <textarea id="recipe-description" name="recipe-description" required></textarea>
-                
-                <button type="submit">Submit Recipe</button>
-            </form>
-        </section>
-    </main>
+    <section id="home">
+        <h2>Introduction</h2>
+        <p>Follow my journey as I become a freelance web developer. I'll share updates and videos documenting my progress.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/example" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="blog">
+        <h2>Blog</h2>
+        <div class="post">
+            <h3>Day 1: Getting Started</h3>
+            <p>Today, I set up my portfolio website. Stay tuned for more updates!</p>
+        </div>
+        <!-- Add more blog posts here -->
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:zuckermandaniel386@gmail.com">zuckermandaniel386@gmail.com</a></p>
+    </section>
 
     <footer>
-        <p>&copy; 2024 Delicious Recipes</p>
+        <p>&copy; 2024 Daniel Zuckerman</p>
     </footer>
 </body>
 </html>
