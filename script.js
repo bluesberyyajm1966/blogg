@@ -9,10 +9,13 @@ simulateBtn.addEventListener('click', async () => {
     const investmentDate = document.getElementById('investmentDate').value;
 
     // Validate input
-    if (!stockSymbol || isNaN(investmentAmount) || investmentAmount <= 0 || !investmentDate) {
-        alert('Please enter a valid stock symbol, positive investment amount, and date.');
+    if (!stockSymbol || isNaN(investmentAmount) || !investmentDate) {
+        alert('Please enter a valid stock symbol, investment amount, and date.');
         return;
     }
+
+    // Show loading indicator
+    document.getElementById('loadingIndicator').style.display = 'block';
 
     try {
         // Fetch current price
@@ -29,11 +32,6 @@ simulateBtn.addEventListener('click', async () => {
         const historicalResponse = await fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${stockSymbol}&apikey=YOUR_API_KEY`);
         const historicalData = await historicalResponse.json();
         const timeSeries = historicalData["Time Series (Daily)"];
-
-        if (!timeSeries) {
-            alert('No historical data found for the stock symbol.');
-            return;
-        }
 
         const prices = [];
         const labels = [];
@@ -125,5 +123,8 @@ simulateBtn.addEventListener('click', async () => {
     } catch (error) {
         console.error('Error fetching data:', error);
         alert('An error occurred while fetching data. Please try again later.');
+    } finally {
+        // Hide loading indicator
+        document.getElementById('loadingIndicator').style.display = 'none';
     }
 });
