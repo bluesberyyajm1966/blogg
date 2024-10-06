@@ -3,58 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel's Web Dev Journey</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Stock Tracker Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Daniel's Web Dev Journey</h1>
-            <p>Sharing my path to becoming a freelance web developer</p>
-        </div>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <section id="home">
-        <div class="container">
-            <h2>Welcome to My Journey</h2>
-            <p>I'm excited to document my growth as a web developer. Join me as I share updates and insights along the way through videos and blog posts.</p>
-            <div class="video-wrapper">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/example" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
-
-    <section id="blog">
-        <div class="container">
-            <h2>Blog Updates</h2>
-            <div class="post">
-                <h3>Day 1: Getting Started</h3>
-                <p>Today, I set up the basic structure of my portfolio website. I'll continue improving it over time, so stay tuned!</p>
-            </div>
-            <!-- Add more blog posts here -->
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>If you have any questions or want to collaborate, feel free to reach out:</p>
-            <p>Email: <a href="mailto:zuckermandaniel386@gmail.com">zuckermandaniel386@gmail.com</a></p>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Daniel Zuckerman. All Rights Reserved.</p>
-        </div>
-    </footer>
+    <h1>Stock Tracker Simulation</h1>
+    <div>
+        <input type="text" id="stockSymbol" placeholder="Enter stock symbol">
+        <input type="number" id="investmentAmount" placeholder="Investment Amount">
+        <button id="simulateBtn">Simulate Investment</button>
+    </div>
+    <div id="results"></div>
+    <canvas id="stockChart" width="400" height="200"></canvas>
+    <script src="script.js"></script>
 </body>
 </html>
