@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Tracker Simulation</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Stock Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        canvas { max-width: 600px; margin: auto; }
+        #results { margin-top: 20px; }
+    </style>
 </head>
 <body>
-    <h1>Stock Tracker Simulation</h1>
-    <div>
-        <input type="text" id="stockSymbol" placeholder="Enter stock symbol">
-        <input type="number" id="investmentAmount" placeholder="Investment Amount">
-        <button id="simulateBtn">Simulate Investment</button>
-    </div>
+    <h1>Stock Tracker</h1>
+    <input type="text" id="stockSymbol" placeholder="Enter stock symbol" />
+    <input type="number" id="investmentAmount" placeholder="Investment Amount" />
+    <input type="date" id="investmentDate" placeholder="Investment Date" />
+    <button id="simulateBtn">Simulate</button>
     <div id="results"></div>
-    <canvas id="stockChart" width="400" height="200"></canvas>
-    <script src="script.js"></script>
+    <canvas id="stockChart"></canvas>
+    <script src="app.js"></script>
 </body>
 </html>
